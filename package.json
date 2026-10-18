@@ -1,0 +1,26 @@
+{
+  "name": "skills",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "setup": "pnpm runtime set node 24.21.0 --global && pnpm install",
+    "docs": "pnpm --filter @wl/docs-ui dev",
+    "docs-build": "pnpm exec turbo run build --filter @wl/docs-ui",
+    "link-skills": "scripts/link-skills.sh",
+    "plugin-check": "claude plugin validate .",
+    "qa": "pnpm exec turbo run ts-check test eslint-check prettier-check --continue --output-logs=errors-only",
+    "fix": "pnpm exec turbo run eslint-fix prettier-fix --continue"
+  },
+  "devDependencies": {
+    "@slip-stream-kit/config": "^0.17.3",
+    "@wl/prettier-config": "workspace:*",
+    "turbo": "2.11.7",
+    "typescript": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.x",
+    "pnpm": ">=10"
+  },
+  "packageManager": "pnpm@12.4.1"
+}

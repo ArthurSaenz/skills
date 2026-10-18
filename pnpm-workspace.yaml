@@ -1,0 +1,52 @@
+packages:
+  - vendor/packages/*
+  - vendor/configs/*
+
+enableGlobalVirtualStore: true
+
+catalog:
+  '@tailwindcss/vite': ^4.3.3
+  '@types/node': ^26.6.5
+  '@types/react': 19.3.0
+  '@types/react-dom': 19.3.0
+  '@vitejs/plugin-react': 6.1.2
+  '@vitest/browser': ^5.0.3
+  '@vitest/browser-playwright': ^5.0.3
+  '@vitest/coverage-v8': ^5.0.3
+  '@vitest/ui': ^5.0.3
+  lucide-react: ^1.55.0
+  playwright: ^1.64.0
+  react: 19.3.0
+  react-dom: 19.3.0
+  tailwindcss: ^4.3.3
+  typescript: ^6.0.3
+  vite: 8.3.4
+  vitest: ^5.0.3
+  vitest-browser-react: ^2.3.0
+
+publicHoistPattern:
+  - '*types*'
+  - '*eslint*'
+  - '*prettier*'
+  - '*typescript*'
+  - '*config*'
+  - '*vitest*'
+  - '*@vitest*'
+  - '*@vitejs*'
+
+allowBuilds:
+  esbuild: true
+
+minimumReleaseAgeExclude:
+  - '@slip-stream-kit/*'
+
+# Pin to the versions starter-workspace's lockfile resolves: newer patches break docs-ui's ts-check.
+overrides:
+  '@tanstack/react-router': 1.170.42
+  '@tanstack/start-static-server-functions': 1.167.40
+
+# nitro's dev error handler imports pathe without declaring it.
+packageExtensions:
+  nitro:
+    dependencies:
+      pathe: ^2.0.3

@@ -16,7 +16,13 @@ claude plugin install arthur-skills@arthursaenz
 
 ```bash
 git clone git@github.com:ArthurSaenz/skills.git ~/projects/skills
-~/projects/skills/scripts/link-skills.sh
+cd ~/projects/skills && pnpm install && pnpm link-skills
+```
+
+## Docs
+
+```bash
+pnpm run docs   # http://localhost:3030
 ```
 
 ## Layout
@@ -28,7 +34,8 @@ skills/
   misc/           rarely used
   in-progress/    beta, local only
   deprecated/     retired
-docs/             one page per shipped skill
+spec/docs/        one page per shipped skill, served by the docs site
+vendor/           docs-ui app and shared configs, copied from starter-workspace
 .agents/adr/      decisions
 .out-of-scope/    ideas deliberately rejected
 .claude-plugin/   plugin + marketplace manifests
@@ -38,7 +45,7 @@ docs/             one page per shipped skill
 
 1. Create `skills/<bucket>/<name>/SKILL.md` with `name` and `description` frontmatter.
 2. Start it in `in-progress/`; move it to `engineering/` or `productivity/` once it earns its place.
-3. For a promoted skill, follow the checklist in [AGENTS.md](./AGENTS.md).
+3. For a promoted skill, follow the checklist in [CLAUDE.md](./CLAUDE.md).
 
 ## Skills
 

@@ -1,0 +1,25 @@
+import { frameworks } from './configs/frameworks/index.js';
+/** A mode is "known" iff it's in the framework registry (the single source of truth for modes). */
+export const isKnownMode = (mode) => {
+    return mode in frameworks;
+};
+/**
+ * Normalize user options to a fully-resolved shape (defaults: react, boundaries 'error', every layer on).
+ *
+ * @example
+ * resolveOptions({ boundaries: false }) // boundaries layer dropped, everything else default
+ */
+export const resolveOptions = (userOptions = {}) => {
+    const { mode, ignores, boundaries, jsdoc, markdown, components, shadcn, rules, userConfigs } = userOptions;
+    return {
+        mode: mode ?? 'react',
+        ignores: ignores ?? [],
+        boundaries: boundaries === undefined ? 'error' : boundaries === true ? 'error' : boundaries,
+        jsdoc: jsdoc ?? true,
+        markdown: markdown ?? true,
+        components: components ?? true,
+        shadcn: shadcn ?? true,
+        rules: rules ?? {},
+        userConfigs: userConfigs ?? [],
+    };
+};

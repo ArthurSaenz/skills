@@ -1,0 +1,28 @@
+## File extensions — block all, then allow specific ones
+*.*
+!*.css
+!*.mjs
+!*.js
+!*.cjs
+!*.json
+!*.md
+!*.mdx
+!*.ts
+!*.tsx
+
+*.yml
+
+## Build output
+.turbo
+.tanstack
+.omc
+dist
+.output
+.nitro
+.source
+coverage
+tsconfig.tsbuildinfo
+routeTree.gen.ts
+
+node_modules
+.DS_Store
