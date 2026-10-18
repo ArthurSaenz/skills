@@ -34,6 +34,8 @@ skills/
   misc/           rarely used
   in-progress/    beta, local only
   deprecated/     retired
+apps/             apps, as apps/<group>/<app>
+packages/         workspace packages
 spec/docs/        one page per shipped skill, served by the docs site
 vendor/           docs-ui app and shared configs, copied from starter-workspace
 .agents/adr/      decisions

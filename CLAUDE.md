@@ -22,6 +22,11 @@ leaves it out and writes a `description` rich enough for the model to know when 
 
 Decisions go in `.agents/adr/NNNN-title.md`; ideas deliberately rejected go in `.out-of-scope/`.
 
+## Workspace
+
+A pnpm + Turbo monorepo. Workspace packages live in `apps/<group>/<app>`, `packages/<name>` and
+`vendor/`. Any `docs/` folder inside an app or package is picked up by the docs site.
+
 ## Commands
 
 - `pnpm run docs`: docs site on http://localhost:3030. Use `pnpm run`, since pnpm's built-in
