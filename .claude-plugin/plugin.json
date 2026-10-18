@@ -1,0 +1,11 @@
+{
+  "name": "arthur-skills",
+  "version": "0.1.0",
+  "description": "Arthur Saenko's agent skills.",
+  "author": {
+    "name": "Arthur Saenko"
+  },
+  "repository": "https://github.com/ArthurSaenz/skills",
+  "license": "MIT",
+  "skills": []
+}

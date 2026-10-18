@@ -1,0 +1,15 @@
+{
+  "name": "arthursaenz",
+  "owner": {
+    "name": "Arthur Saenko"
+  },
+  "description": "Arthur Saenko's agent skills as an installable plugin.",
+  "plugins": [
+    {
+      "name": "arthur-skills",
+      "source": "./",
+      "description": "Arthur Saenko's agent skills.",
+      "category": "engineering"
+    }
+  ]
+}
